@@ -1,0 +1,25 @@
+.task {
+  width: 1200px;
+  margin: 100px auto 30px;
+  border: 1px solid red;
+}
+
+.task__header {
+  text-align: center;
+  margin: 30px;
+  font-size: 25px;
+}
+
+.task__value {
+  margin: 30px auto 30px;
+  width: 250px;
+  height: 50px;
+  font-size: 16;
+  display: block;
+}
+
+.task__answer {
+  text-align: center;
+  margin: 30px;
+  font-size: 25px;
+}
