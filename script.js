@@ -1,6 +1,7 @@
 const input1 = document.querySelector("#_input1");
 const span1 = document.querySelector("#_span1");
 const span2 = document.querySelector("#_span2");
+const tagsAll = document.querySelectorAll(".tags__name");
 
 const obj = {
   button:
@@ -22,6 +23,21 @@ const obj = {
   img: "	Изображение, картинка",
   input: "Поле для ввода, элемент формы",
   main: "	Основной контент",
+
+  map: "Создаёт активные области на карте-изображении",
+  mark: "Выделяет фрагменты текста, помечая их желтым фоном",
+  meta: "Используется для хранения дополнительной информации о странице",
+  meter: "Индикатор измерения в заданном диапазоне",
+  nav: "Раздел документа, содержащий навигационные ссылки по сайту",
+  noscript: "Определяет секцию, не поддерживающую сценарий (скрипт).",
+  ol: "Упорядоченный нумерованный список",
+  option: "Определяет вариант/опцию для выбора в раскрывающемся списке",
+  q: "	Определяет краткую цитату",
+  tfoot: "Определяет нижний колонтитул таблицы",
+  th: "Создает заголовок ячейки таблицы",
+  thead: "Определяет заголовок таблицы",
+  u: "Выделяет отрывок текста подчёркиванием",
+
   table: "Определяет таблицу",
   textarea: "Многострочное поле для ввода",
   section: "Раздел",
@@ -59,3 +75,9 @@ input1.addEventListener("keydown", function (event) {
     }
   }
 });
+
+for (let tag of tagsAll) {
+  tag.addEventListener("click", function () {
+    detectTag(tag.textContent);
+  });
+}

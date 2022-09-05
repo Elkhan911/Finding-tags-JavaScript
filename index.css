@@ -13,9 +13,9 @@
 }
 
 .search__text {
-  width: 250px;
+  width: 420px;
+  height: 90px;
   margin: auto;
-  height: 50px;
   font-size: 16px;
   font-weight: normal;
 }
