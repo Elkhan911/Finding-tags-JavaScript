@@ -1,25 +1,35 @@
-.task {
+.search {
+  margin: 30px auto 0;
+  border: 1px solid black;
   width: 1200px;
-  margin: 100px auto 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
 }
 
-.task__header {
+.search__header {
   text-align: center;
-  margin: 30px;
-  font-size: 25px;
+  font-size: 40px;
 }
 
-.task__value {
-  margin: 30px auto 30px;
+.search__text {
   width: 250px;
+  margin: auto;
   height: 50px;
-  font-size: 16;
-  font-weight: 600;
-  display: block;
+  font-size: 16px;
+  font-weight: normal;
 }
 
-.task__answer {
+.search__key {
   text-align: center;
-  margin: 30px;
   font-size: 25px;
+  min-height: 50px;
+}
+
+.search__value {
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+  padding: 5px;
 }

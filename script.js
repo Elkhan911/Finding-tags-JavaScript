@@ -33,24 +33,29 @@ const obj = {
   link: "Определяет привязку внешнего ресурса (чаще всего, привязку таблицы стилей CSS)",
 };
 
-let isItInBase = true;
-
-input1.addEventListener("keydown", function (event) {
-  if (event.key == "Enter") {
-    span1.textContent = input1.value;
-    detectTag(input1.value);
-    input1.value = "";
-  }
-});
-
 function detectTag(string) {
   if (obj[string] == undefined) {
     span1.textContent = input1.value;
     span2.textContent = "Такого тега нет в нашей базе";
-    input1.value = "";
   } else {
     span1.textContent = input1.value;
     span2.textContent = obj[string];
-    input1.value = "";
+  }
+}
+
+input1.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
+    if (checkValue(input1.value)) {
+      detectTag(input1.value);
+    }
+  }
+});
+
+function checkValue(value) {
+  if (value == "" || value == " " || value == "  " || value == "/n") {
+    alert("Необходимо ввести наименование тега HTML");
+    return false;
+  } else {
+    return true;
   }
 }
