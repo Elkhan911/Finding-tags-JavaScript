@@ -34,12 +34,12 @@ const obj = {
 };
 
 function detectTag(str) {
-  let strNoSpaces = str.trim();
+  let strNoSpaces = str.trim().toLowerCase();
   if (obj[strNoSpaces] == undefined) {
-    span1.textContent = input1.value;
+    span1.textContent = strNoSpaces;
     span2.textContent = "Такого тега нет в нашей базе";
   } else {
-    span1.textContent = input1.value;
+    span1.textContent = strNoSpaces;
     span2.textContent = obj[strNoSpaces];
   }
 }
