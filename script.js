@@ -23,7 +23,6 @@ const obj = {
   img: "	Изображение, картинка",
   input: "Поле для ввода, элемент формы",
   main: "	Основной контент",
-
   map: "Создаёт активные области на карте-изображении",
   mark: "Выделяет фрагменты текста, помечая их желтым фоном",
   meta: "Используется для хранения дополнительной информации о странице",
@@ -37,7 +36,6 @@ const obj = {
   th: "Создает заголовок ячейки таблицы",
   thead: "Определяет заголовок таблицы",
   u: "Выделяет отрывок текста подчёркиванием",
-
   table: "Определяет таблицу",
   textarea: "Многострочное поле для ввода",
   section: "Раздел",
@@ -49,6 +47,7 @@ const obj = {
   link: "Определяет привязку внешнего ресурса (чаще всего, привязку таблицы стилей CSS)",
 };
 
+// функция для поиска тега
 function detectTag(str) {
   let strNoSpaces = str.trim().toLowerCase();
   if (obj[strNoSpaces] == undefined) {
@@ -60,6 +59,7 @@ function detectTag(str) {
   }
 }
 
+// функция для проверки инпута на пустоту
 function checkValue(value) {
   if (value == "" || value == " " || value == "  ") {
     alert("Необходимо ввести наименование тега HTML");
@@ -76,8 +76,13 @@ input1.addEventListener("keydown", function (event) {
   }
 });
 
-for (let tag of tagsAll) {
-  tag.addEventListener("click", function () {
-    detectTag(tag.textContent);
-  });
+// функция для клика по тегам
+function tagActive() {
+  for (let tag of tagsAll) {
+    tag.addEventListener("click", function () {
+      detectTag(tag.textContent);
+    });
+  }
 }
+
+tagActive();
